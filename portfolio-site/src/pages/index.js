@@ -9,15 +9,14 @@ import Work from "../components/work";
 
 
 const IndexPage = ({data}) => (
-  <Layout>
+  <div>
     <SEO title="Portfolio" />
-    {/* <Introduction/> */}
+    <Introduction/>
     <div className="work-cards">
       <Work/>
       <Card/>
     </div>
-  </Layout>
-)
+</div>)
 
 export default IndexPage;
 

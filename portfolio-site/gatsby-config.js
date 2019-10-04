@@ -4,6 +4,7 @@ module.exports = {
     title: `Marius Gessler`,
     description: `This is Me`,
     author: `Marius Gessler`,
+    keywords: `This,is,a,test`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,

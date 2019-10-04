@@ -1,36 +1,27 @@
-const path = require('path');
+const path = require('path')
 
-exports.createPages = ({boundActionCreators, graphql}) => {
-    const {createPage} = boundActionCreators
-
-    const postTemplate = path.resolve('src/templates/work-single.js')
-
-    return graphql(`
-    {
-        allMarkdownRemark {
-            edges {
-                node{
-                        html
-                        id
-                        frontmatter{
-                        path
-                        title
-                        author
-                        }
+module.exports.createPages = async ({ graphql, actions }) => {
+    const { createPage } = actions
+    const workSingleTemplate = path.resolve('./src/templates/work-single.js')
+    const res = await graphql(`
+        query {
+            allContentfulWork {
+                edges {
+                    node {
+                        slug
                     }
                 }
             }
-    }
-    `).then(res=> {
-        if(res.errors) {
-            return Promise.reject(res.errors)
         }
+    `)
 
-        res.data.allMarkdownRemark.edges.forEach(({node})=> 
+    res.data.allContentfulWork.edges.forEach((edge) => {
         createPage({
-            path:node.frontmatter.path,
-            component: postTemplate
-        }))
+            component: workSingleTemplate,
+            path: `/work/${edge.node.slug}`,
+            context: {
+                slug: edge.node.slug
+            }
+        })
     })
 }
-
