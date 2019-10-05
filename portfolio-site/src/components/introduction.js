@@ -7,7 +7,8 @@ import { Link } from "gatsby";
 const IntroContainer    = styled.div`
 display: flex;
 flex-direction: column;
-background-color: #F4F4F4;
+justify-content: center;
+height:100vh;
 `
 
 const IntroductionGroup = styled.div`
