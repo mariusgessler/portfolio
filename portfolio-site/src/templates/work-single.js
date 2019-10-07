@@ -1,6 +1,6 @@
 import React from "react";
 import Layout from "../components/layout";
-import { graphql } from "gatsby";
+import { graphql, Link } from "gatsby";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import SEO from "../components/seo";
 
@@ -14,7 +14,11 @@ query($slug: String!) {
     }
 }`
 
-const WorkSingle = props => {
+const WorkSingle = (props, pageContext) => {
+    console.log(props.pageContext.next)
+    // const { previous, next } = this.props.pageContext
+    // const  previous  = props.pageContext.previous
+    // const  next  = props.pageContext.next
     // Set up options to specifiy how specific node types are rendered
     const options = {
         renderNode: {
@@ -32,6 +36,9 @@ const WorkSingle = props => {
             <SEO title={props.data.contentfulWork.title}></SEO>
             <h1>{props.data.contentfulWork.title}</h1>
             {documentToReactComponents(props.data.contentfulWork.description.json, options)}
+            {props.pageContext.previous && (<Link to={`work/${props.pageContext.previous.slug}`} rel="prev">{props.pageContext.previous.title}</Link>)}
+
+            {props.pageContext.next ? (<Link to={`work/${props.pageContext.next.slug}`} rel="next">{props.pageContext.next.title}</Link>): <Link to="/about">About me</Link>}
         </Layout>
     )
 

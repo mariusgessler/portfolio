@@ -5,22 +5,32 @@ module.exports.createPages = async ({ graphql, actions }) => {
     const workSingleTemplate = path.resolve('./src/templates/work-single.js')
     const res = await graphql(`
         query {
-            allContentfulWork {
+            allContentfulWork  {
                 edges {
                     node {
                         slug
+                        title
                     }
                 }
             }
         }
     `)
 
-    res.data.allContentfulWork.edges.forEach((edge) => {
+    const posts = res.data.allContentfulWork.edges
+
+
+    posts.forEach((edge, index) => {
+        const previous = index === posts.length - 1 ? null : posts[index + 1].node
+        const next = index === 0 ? null : posts[index - 1].node
+        
         createPage({
             component: workSingleTemplate,
             path: `/work/${edge.node.slug}`,
             context: {
-                slug: edge.node.slug
+                slug: edge.node.slug,
+                title: edge.node.title,
+                previous,
+                next
             }
         })
     })
