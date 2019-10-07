@@ -36,9 +36,9 @@ const WorkSingle = (props, pageContext) => {
             <SEO title={props.data.contentfulWork.title}></SEO>
             <h1>{props.data.contentfulWork.title}</h1>
             {documentToReactComponents(props.data.contentfulWork.description.json, options)}
-            {props.pageContext.previous && (<Link to={`work/${props.pageContext.previous.slug}`} rel="prev">{props.pageContext.previous.title}</Link>)}
+            {props.pageContext.previous && (<Link to={`work/${props.pageContext.previous.slug}`} rel="prev">Previous: {props.pageContext.previous.title}</Link>)}
 
-            {props.pageContext.next ? (<Link to={`work/${props.pageContext.next.slug}`} rel="next">{props.pageContext.next.title}</Link>): <Link to="/about">About me</Link>}
+            {props.pageContext.next ? (<Link to={`work/${props.pageContext.next.slug}`} rel="next">Next: {props.pageContext.next.title}</Link>): <Link to="/about">About me</Link>}
         </Layout>
     )
 

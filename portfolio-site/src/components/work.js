@@ -206,7 +206,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-          allContentfulWork{
+          allContentfulWork(sort: {order: DESC, fields: excerpt}){
               edges {
                   node {
                       description {
