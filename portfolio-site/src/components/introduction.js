@@ -10,13 +10,21 @@ const IntroContainer    = styled.div`
 display: flex;
 flex-direction: column;
 justify-content: start;
-height:100vh;
+height:90vh;
   @media (min-width: 700px) {
-    border: 2px solid red;
     justify-content:center;
     flex-direction: row-reverse;
     flex: 1;
     height: 100%;
+  }
+  @media (min-width: 700px) {
+    align-items: center;
+    flex-direction: row-reverse;
+    flex: 1;
+    height: 75vh;
+  }
+   @media (min-width: 700px) {
+    height: 90vh;
   }
 `
 
@@ -40,6 +48,10 @@ font-weight: 500;
     text-align: left;
     font-size: 1.3rem;
   }
+
+  @media (min-width: 1100px) {
+    font-size: 1.6rem;
+  }
 `
 
 const Opening = styled.h2`
@@ -50,7 +62,10 @@ display:none;
     font-weight: 100;
     font-size: 1.6rem;
     max-width: 435px;
-    
+  }
+
+  @media (min-width:700px) {
+    font-size: 2rem;
   }
 `
 
@@ -65,6 +80,11 @@ font-size: 1.3rem;
     font-size: 0.8rem;
     width: 290px;
   }
+
+  @media (min-width: 1100px) {
+    font-size: 1rem;
+    width: 320px;
+  }
 `
 
 
@@ -77,6 +97,8 @@ const PortraitImg = styled.img`
 max-height: 350px;
 margin: 0 auto;
 display: block;
+animation: fadein 2s; 
+ 
 
   @media (min-width: 375px) {
     max-height: 470px;
@@ -88,8 +110,21 @@ display: block;
 
   @media (min-width: 700px) {
     width: 325px;
-    
   }
+
+  @media (min-width: 1100px) {
+    width: 500px;
+  }
+  @media (min-width: 1100px) {
+    width: 500px;
+  }
+  @media (min-width: 1500px) {
+    width: 600px;
+  }
+  @keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
 
 `
 

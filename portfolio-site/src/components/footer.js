@@ -9,7 +9,7 @@ import GitHub from "../assets/github.svg";
 
 const Copyright = styled.p`
 color:${props => props.theme.mg_grey};
-font-size: 0.6rem `
+font-size: 0.8rem `
 
 const FooterContainer = styled.footer`
 display:flex;
@@ -27,12 +27,10 @@ transition: width 0.5s ease;
 &: hover{
     fill: ${props => props.theme.mg_blue};
 }
-
     @media (min-width: 375px) {
     width: 20px;
   }
 `
-
 
 
 

@@ -12,7 +12,19 @@ const IndexContainer = styled.div`
 padding: 0.7em
   @media (min-width: 700px) {
     padding: 0.7em 2em;
-  }`
+  }
+  @media (min-width: 850px) {
+    width: calc(850px - 1.4rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1100px) {
+    width: calc(1100px - 1.4rem);
+    max-width: 100%;
+    margin: 0 auto;
+  }
+  `
 
 const ActionCallContainer = styled.div``
 
@@ -21,7 +33,11 @@ text-align:center;
 margin: 70px auto;
 font-weight: 100;
 color: ${props => props.theme.mg_grey};
-font-size: 1.3rem;`
+font-size: 1.3rem;
+  @media (min-width: 700px){
+    font-size: 1rem;
+  }`
+ 
 
 
 const IndexPage = () => (
