@@ -17,8 +17,6 @@ module.exports.createPages = async ({ graphql, actions }) => {
     `)
 
     const posts = res.data.allContentfulWork.edges
-
-
     posts.forEach((edge, index) => {
         const previous = index === posts.length - 1 ? null : posts[index + 1].node
         const next = index === 0 ? null : posts[index - 1].node

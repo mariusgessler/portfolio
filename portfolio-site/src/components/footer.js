@@ -42,8 +42,8 @@ const Footer = () => (
         
         <SocialContainer>
             {/* <SocialIcon src="../assets/github.svg"/> */}
-            <a href="https://www.linkedin.com/in/marius-gessler"><SocialIcon src={LinkedIn}/></a>
-            <a href="https://github.com/mariusgessler"><SocialIcon src={GitHub}/></a>
+            <a href="https://www.linkedin.com/in/marius-gessler" target="_blank"><SocialIcon src={LinkedIn}/></a>
+            <a href="https://github.com/mariusgessler" target="_blank"><SocialIcon src={GitHub}/></a>
         </SocialContainer>
         <Copyright>
             2019, Marius Gessler

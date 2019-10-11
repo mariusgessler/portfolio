@@ -176,7 +176,7 @@ class Work extends Component {
           </FeaturedImageContainer>
             </Link>
 
-        <ConditionalWrapper condition={this.state.width < 700} ifWrapper={children => <Fade right>  {children} </Fade>} elseWrapper={children => <Fade bottom big>  {children} </Fade>} >
+        <ConditionalWrapper condition={this.state.width < 700} ifWrapper={children => <Fade right>  {children} </Fade>} elseWrapper={children => <Fade duration={500} bottom big>  {children} </Fade>} >
 
        <WorkInfo>
           <Link to={`work/${edge.node.slug}`}>

@@ -1,59 +1,59 @@
 import { Link } from "gatsby"
-import PropTypes from "prop-types"
+import { ThemeProvider } from "styled-components";
+import Theme from "../components/theme";
 import React from "react"
+import styled from "styled-components";
 
-const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      background: `#f4f4f4`,
-      listStyle: 'none',
-      marginBottom: `1.45rem`,
-    }}
-  >
-    <div
-      style={{
-        margin: `0 auto`,
-        maxWidth: 960,
-        padding: `1.45rem 1.0875rem`,
-      }}
-    >
-      <h1 style={{ margin: 0 }}>
-        <Link
-          to="/"
-          style={{
-            color: `white`,
-            textDecoration: `none`,  
-          }}
-        >
-          {siteTitle}
-        </Link>
-      </h1>
-    </div>
-    <nav>
-      <ul>
-        <li>
-          <Link 
-          to="/">
-            portfolio
-          </Link>
-        </li>
-        <li>
-          <Link 
-          to="/about">
-            about me
-          </Link>
-        </li>
-      </ul>
-    </nav>
-  </header>
+const HeaderContainer = styled.header`
+`
+
+const Nav = styled.nav`
+`
+
+const Ul = styled.ul`
+list-style: none;
+margin: 0 auto;
+display: flex;
+justify-content: flex-end;
+margin:0;
+padding: 0`
+
+const Li = styled.li`
+`
+
+const Links = styled(Link)`
+margin: 15px;
+font-size: 0.75em;
+color:${props => props.theme.mg_grey}
+    &:hover {
+        color: ${props => props.theme.mg_blue}
+    }
+}`
+
+
+
+const Header = ({about}) => (
+  <ThemeProvider theme={Theme}>
+  <HeaderContainer>
+    <Nav>
+      <Ul>
+        <Li>
+          <Links to="/">Home</Links>
+        </Li>
+        {!about ? 
+        <Li>
+          <Links to="about">About me</Links>
+        </Li>
+        : null
+        }
+      </Ul>
+
+    </Nav>
+  
+  </HeaderContainer>
+  </ThemeProvider>
+ 
 )
 
-Header.propTypes = {
-  siteTitle: PropTypes.string,
-}
-
-Header.defaultProps = {
-  siteTitle: ``,
-}
 
 export default Header

@@ -6,6 +6,8 @@ body {
   font-size: 1.5em;
   line-height: 1.3;
   background-color: #F4F4F4;
+  padding: 0.7em
+  
 }
 
 a {
@@ -18,3 +20,11 @@ h1,h2,h3,h4,p {
     color: #145374;
 }
 
+li {
+  color: #145374;
+  padding-left: 0;
+}
+
+ul {
+  list-style-type: circle;
+}
