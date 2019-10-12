@@ -23,7 +23,7 @@ query($slug: String!) {
             json
         }
         bannerImage {
-            fluid (quality: 80, maxWidth: 1200) {
+            fluid (quality: 100, maxWidth: 1200) {
                 ...GatsbyContentfulFluid
             }
         }

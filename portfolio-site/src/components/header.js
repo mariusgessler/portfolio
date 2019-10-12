@@ -1,7 +1,7 @@
-import { Link } from "gatsby"
+import { Link } from "gatsby";
 import { ThemeProvider } from "styled-components";
 import Theme from "../components/theme";
-import React from "react"
+import React from "react";
 import styled from "styled-components";
 
 const HeaderContainer = styled.header`
@@ -31,29 +31,28 @@ color:${props => props.theme.mg_grey}
 }`
 
 
-
+// If current page is "about", don't <Link to="about"> 
 const Header = ({about}) => (
-  <ThemeProvider theme={Theme}>
-  <HeaderContainer>
-    <Nav>
-      <Ul>
-        <Li>
-          <Links to="/">Home</Links>
-        </Li>
-        {!about ? 
-        <Li>
-          <Links to="about">About me</Links>
-        </Li>
-        : null
-        }
-      </Ul>
 
-    </Nav>
-  
-  </HeaderContainer>
+  <ThemeProvider theme={Theme}>
+    <HeaderContainer>
+      <Nav>
+        <Ul>
+          <Li>
+            <Links to="/">Home</Links>
+          </Li>
+          {!about ? 
+          <Li>
+            <Links to="about">About me</Links> 
+          </Li>
+          : null
+          }
+        </Ul>
+      </Nav>
+    </HeaderContainer>
   </ThemeProvider>
  
 )
 
 
-export default Header
+export default Header;

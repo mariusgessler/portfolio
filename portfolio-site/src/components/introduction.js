@@ -1,10 +1,9 @@
 import React from "react"
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import Theme from "../components/theme"
+import Theme from "../components/theme";
 import Portrait from "../images/portrait.svg";
 import { Link } from "gatsby";
-
 
 const IntroContainer    = styled.div`
 display: flex;
@@ -37,7 +36,7 @@ color: ${props => props.theme.mg_blue};
   }
 `
 
-const Greeting      = styled.h1`
+const Greeting = styled.h1`
 margin: 0 auto;
 text-align: center;
 font-size: 2rem;
@@ -69,7 +68,7 @@ display:none;
   }
 `
 
-const Actioncall        = styled.p`
+const Actioncall = styled.p`
 text-align:center;
 margin: 15px auto;
 font-weight: 100;
@@ -88,7 +87,7 @@ font-size: 1.3rem;
 `
 
 
-const PortraitGroup     = styled.div`
+const PortraitGroup = styled.div`
 animation: fadein 3s;
 
 `
@@ -125,7 +124,6 @@ animation: fadein 2s;
     from { opacity: 0; }
     to   { opacity: 1; }
 }
-
 `
 
 
@@ -145,10 +143,9 @@ people.</Opening>
         <Actioncall>Scroll down to explore some of my work 
         or get to know me a little better <Link to="/about">here</Link>.</Actioncall>
       </IntroductionGroup>
-     
   </IntroContainer>
 </ThemeProvider>
 
 )
 
-export default Introduction
+export default Introduction;

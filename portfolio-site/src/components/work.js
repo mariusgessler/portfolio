@@ -8,14 +8,12 @@ import Arrow from "../images/arrow.svg";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
-import { useMediaQuery } from "react-responsive";
 import Theme from "../components/theme";
 
 const WorkContainer = styled.div`
 margin: 50px auto 0;
   @media (min-width: 700px){
     margin-top: 0 auto;
-
   }
 `
 const WorkItem = styled.div`
@@ -24,7 +22,6 @@ margin-top: 75px;
     max-width: 850px;
     margin: 0 auto;
   }`
-
 
 const FeaturedImageContainer = styled.div`
 box-shadow: 0 0.7em 1em 0 rgba(0,0,0,.3);
@@ -39,7 +36,6 @@ const FeaturedImage = styled(Img)`
 width: 100% ;
 border-radius: 4px;
 `
-
 const Excerpt = styled.p`
 font-size: 1rem;
 font-weight: 200;
@@ -48,7 +44,6 @@ margin:0 0 25px;
     font-size: 0.8rem;
   }
 `
-
 const Technologies = styled.div`
 width:300px;
 display: flex;
@@ -66,7 +61,6 @@ width: 180px;
 align-items: center;
 justify-content: center;
 `
-
 const TechnologyIcons = styled(SVG)`
 .cls-1 {
   fill: ${props => props.theme.mg_lightgrey};
@@ -84,7 +78,6 @@ display:inline-block;
 margin-left: 5px;
 transition: margin-left .5s ease;
 `
-
 const StyledLink = styled(Link)`
 font-weight: 400;
 `
@@ -139,12 +132,7 @@ transition: background-color 0.9s ease;
     
   }
 `
-// const isMobile = useMediaQuery ({query:'max-width: 700px'});
-
-// //Create functional component to determin when <ScrollAnimation> should be renderen
-
-
-
+// To have a different <Fade> on mobile, I use <ConditionalWrapper> based on screen size.
 class Work extends Component {
     constructor (props){
         super()
@@ -166,39 +154,37 @@ class Work extends Component {
   
     render () {
         return (
-      <ThemeProvider theme={Theme}>
-      <WorkContainer>
-      {this.props.edges.map(edge => (
-        <WorkItem>
-          <Link to={`work/${edge.node.slug}`}>
-          <FeaturedImageContainer>
-            <FeaturedImage fluid={edge.node.featuredImage.fluid}></FeaturedImage>
-          </FeaturedImageContainer>
-            </Link>
-
-        <ConditionalWrapper condition={this.state.width < 700} ifWrapper={children => <Fade right>  {children} </Fade>} elseWrapper={children => <Fade duration={500} bottom big>  {children} </Fade>} >
-
-       <WorkInfo>
-          <Link to={`work/${edge.node.slug}`}>
-          <Title>{edge.node.subtitle}</Title>
-          <Excerpt>{edge.node.excerpt}</Excerpt>
-            <InfoFooter>
-              <Technologies>
-                  {edge.node.technologies.map((item)=> <TechnologyIcons src={item.file.url} />)}
-              </Technologies>
-              <LearnMore>
-               <StyledLink to={`work/${edge.node.slug}`}>More Info<ArrowIcon src={Arrow}/></StyledLink>
-               </LearnMore>
-          </InfoFooter>
-          </Link>
-        </WorkInfo>
-      </ConditionalWrapper>
-        </WorkItem>
-      ))}
-      </WorkContainer>
-      </ThemeProvider>
-    )
-
+        <ThemeProvider theme={Theme}>
+          <WorkContainer>
+          {this.props.edges.map(edge => (
+              <WorkItem>
+                <Link to={`work/${edge.node.slug}`}>
+                  <FeaturedImageContainer>
+                    <FeaturedImage fluid={edge.node.featuredImage.fluid}></FeaturedImage>
+                  </FeaturedImageContainer>
+                </Link>
+                
+              <ConditionalWrapper condition={this.state.width < 700} ifWrapper={children => <Fade right>  {children} </Fade>} elseWrapper={children => <Fade duration={500} bottom big>  {children} </Fade>} >
+                <WorkInfo>
+                  <Link to={`work/${edge.node.slug}`}>
+                    <Title>{edge.node.subtitle}</Title>
+                    <Excerpt>{edge.node.excerpt}</Excerpt>
+                    <InfoFooter>
+                      <Technologies>
+                        {edge.node.technologies.map((item)=> <TechnologyIcons src={item.file.url} />)}
+                      </Technologies>
+                      <LearnMore>
+                        <StyledLink to={`work/${edge.node.slug}`}>More Info<ArrowIcon src={Arrow}/></StyledLink>
+                      </LearnMore>
+                    </InfoFooter>
+                  </Link>
+                </WorkInfo>
+            </ConditionalWrapper>
+            </WorkItem>
+          ))}
+          </WorkContainer>
+        </ThemeProvider>
+      )
     }
 }
 
@@ -220,7 +206,7 @@ export default () => (
                       subtitle
                       excerpt
                       featuredImage {
-                          fluid  (maxWidth: 375) {
+                          fluid  (quality: 100, maxWidth: 375) {
                               ...GatsbyContentfulFluid
                           }
                       }

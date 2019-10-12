@@ -6,7 +6,6 @@ import SVG from "react-inlinesvg";
 import LinkedIn from "../assets/linkedin.svg";
 import GitHub from "../assets/github.svg";
 
-
 const Copyright = styled.p`
 color:${props => props.theme.mg_grey};
 font-size: 0.8rem `
@@ -26,30 +25,27 @@ transition: width 0.5s ease;
 
 &: hover{
     fill: ${props => props.theme.mg_blue};
-}
+    }
     @media (min-width: 375px) {
     width: 20px;
-  }
+    }
 `
 
 
 
 
 const Footer = () => (
-        
+    
         <ThemeProvider theme={Theme}>
-        <FooterContainer>
-        
-        <SocialContainer>
-            {/* <SocialIcon src="../assets/github.svg"/> */}
-            <a href="https://www.linkedin.com/in/marius-gessler" target="_blank" rel="noreferrer"><SocialIcon src={LinkedIn}/></a>
-            <a href="https://github.com/mariusgessler" target="_blank" rel="noreferrer"><SocialIcon src={GitHub}/></a>
-        </SocialContainer>
-        <Copyright>
-            2019, Marius Gessler
-        </Copyright>
-        
-        </FooterContainer>
+            <FooterContainer>
+                <SocialContainer>
+                    <a href="https://www.linkedin.com/in/marius-gessler" target="_blank" rel="noreferrer"><SocialIcon src={LinkedIn}/></a>
+                    <a href="https://github.com/mariusgessler" target="_blank" rel="noreferrer"><SocialIcon src={GitHub}/></a>
+                </SocialContainer>
+                <Copyright>
+                    2019, Marius Gessler
+                </Copyright>
+            </FooterContainer>
         </ThemeProvider>
         
     )
