@@ -3,8 +3,8 @@ import Header from '../components/header';
 import SEO from "../components/seo";
 import Footer from "../components/footer";
 import { ThemeProvider } from "styled-components";
-import Img from "gatsby-image";
-import { graphql } from "gatsby"
+import Img from 'gatsby-image';
+import { graphql } from "gatsby";
 
 import styled from "styled-components";
 
@@ -38,10 +38,12 @@ justify-content: center;
 max-width: 650px;
 margin: 20px auto;`
 
+
+
 const Headshot = styled(Img)`
-border-radius: 100%
 box-shadow: 0 0.7em 1em 0 rgba(0,0,0,.3);
 margin: 0 auto;
+border-radius:100%;
 `
 const Greeting = styled.h1`
 margin: 25px auto;
@@ -76,7 +78,6 @@ const About = ({data}) => {
             <AboutWrapper>
             <AboutContainer>
                       <Headshot fixed={data.file.childImageSharp.fixed}></Headshot>
-
                 <Greeting>
                     Nice to meet you.
                 </Greeting>

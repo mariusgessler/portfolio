@@ -143,7 +143,7 @@ const WorkSingle = (props) => {
             <Subtitle>{props.data.contentfulWork.goal}</Subtitle>
             <LinkContainer>
             {props.data.contentfulWork.links.map((link, index) => (
-                <Links href={`${link}`} target="_blank">{props.data.contentfulWork.linkTitle[index]}
+                <Links href={`${link}`} target="_blank" rel="noreferrer">{props.data.contentfulWork.linkTitle[index]}
                 </Links>
             ))}
             </LinkContainer>

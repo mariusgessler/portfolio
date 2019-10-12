@@ -2,13 +2,14 @@
 module.exports = {
   siteMetadata: {
     title: `Marius Gessler`,
-    description: `This is Me`,
+    description: `A developer looking to work on meaningful projects with some nice people.`,
     author: `Marius Gessler`,
-    keywords: `This,is,a,test`
+    keywords: `front end developer, web developer, web designer, web development, react developer, developer netherlands`
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-catch-links`,
+    `gatsby-plugin-styled-components`,
     {
       resolve: 'gatsby-source-filesystem',
       options: {
@@ -35,18 +36,20 @@ module.exports = {
     {
       resolve: `gatsby-plugin-manifest`,
       options: {
-        name: `gatsby-starter-default`,
-        short_name: `starter`,
+        name: `portfolio`,
         start_url: `/`,
-        background_color: `#663399`,
-        theme_color: `#663399`,
+        background_color: `#145374`,
+        theme_color: `#145374`,
         display: `minimal-ui`,
         icon: `src/images/portrait.png`, // This path is relative to the root of the site.
       },
     },
-    `gatsby-transformer-remark`
-    // this (optional) plugin enables Progressive Web App + Offline functionality
-    // To learn more, visit: https://gatsby.dev/offline
-    // `gatsby-plugin-offline`,
+    `gatsby-transformer-remark`,
+    {
+    resolve: `gatsby-plugin-offline`,
+    options: {
+        precachePages: [`/index/`, `/work/*`,`/about`],
+      },
+  },
   ],
 }

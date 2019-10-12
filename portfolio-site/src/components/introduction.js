@@ -135,7 +135,7 @@ const Introduction = props => (
 <ThemeProvider theme={Theme}>
   <IntroContainer>
      <PortraitGroup>
-        <PortraitImg src={Portrait} />   
+        <PortraitImg src={Portrait} alt="Image trace of myself" />   
       </PortraitGroup>
       <IntroductionGroup>
         <Greeting>Hi, I'm Marius.</Greeting>

@@ -220,7 +220,7 @@ export default () => (
                       subtitle
                       excerpt
                       featuredImage {
-                          fluid {
+                          fluid  (maxWidth: 375) {
                               ...GatsbyContentfulFluid
                           }
                       }
