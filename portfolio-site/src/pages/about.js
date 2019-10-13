@@ -76,7 +76,7 @@ const About = ({data}) => {
                     Nice to meet you.
                 </Greeting>
                 <AboutMe>
-                    I believe that technology can make the <a href="https://www.youtube.com/watch?v=B8C5sjjhsso" target="_blank">world a better place</a>. Well, maybe not every piece of technology, but I know my contribution can make a difference to solving real-world problems. I am seeking opportunities to work on projects that improve and ease the life of people around me.
+                    I believe that technology can make the <a href="https://www.youtube.com/watch?v=B8C5sjjhsso" target="_blank" rel="noreferrer">world a better place</a>. Well, maybe not every piece of technology, but I know my contribution can make a difference to solving real-world problems. I am seeking opportunities to work on projects that improve and ease the life of people around me.
                 </AboutMe>
                 <AboutMe>
                   Studying International Communication Management in Den Haag, learning about integrated marketing, design thinking, user research and campaign management fostered my critical and creative thinking - and while emersed in Dutch culture, I fell in love with The Netherlands.

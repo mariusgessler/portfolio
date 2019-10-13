@@ -1,3 +1,4 @@
+require('dotenv').config();
 
 module.exports = {
   siteMetadata: {
@@ -20,8 +21,8 @@ module.exports = {
     {
       resolve: `gatsby-source-contentful`,
       options: {
-        spaceId: `xf0u4wogxlsc`,
-        accessToken: `k-Qcp96FcmD_asB7owfzcD9he81wgLjIzGq8qgc9V1s`,
+        spaceId: process.env.GATSBY_SPACE_ID,
+        accessToken: process.env.GATSBY_ACCESS_TOKEN,
       }
     },
     {
