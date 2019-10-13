@@ -1,11 +1,9 @@
 import React from "react";
 import Layout from "../components/layout";
-import Footer from "../components/footer"
 import { graphql, Link } from "gatsby";
 import { BLOCKS } from "@contentful/rich-text-types";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import { ThemeProvider } from "styled-components";
-
 import Theme from "../components/theme";
 import SEO from "../components/seo";
 import Img from "gatsby-image";
@@ -32,7 +30,7 @@ query($slug: String!) {
 
 const WorkSingleContainer = styled.div`
 max-width: 900px
-margin: 0 auto
+margin: 35px auto;
 padding: 1em;`
 
 const Title = styled.h1`
@@ -51,6 +49,7 @@ font-size: 1.3rem;
 
     }
 `
+
 const LinkContainer = styled.div`
 display: flex;
 justify-content: center;`
@@ -64,7 +63,6 @@ color:${props => props.theme.mg_grey}
     }
 }`
 
-
 const Text = styled.p`
 font-weight: 200;
 max-width: 800px;
@@ -75,7 +73,6 @@ line-height: 1.5em;
         margin: 35px auto;
     }
 `
-
 
 const Banner = styled(Img)`
 box-shadow: 0 0.7em 1em 0 rgba(0,0,0,.3);
@@ -89,10 +86,19 @@ border-radius: 4px;
 
 const PaginationContainer = styled.div`
 display:flex;
-justify-content: space-between`
+flex-direction: column;
+align-items: center;
+margin: 0 auto;
+max-width: 1100px;
+    @media(min-width: 700px) {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+`
 
 const Pagination = styled(Link)`
-margin: 15px;
+margin: 15px 0;
+text-align: center;
 font-size: 0.8em;
 color:${props => props.theme.mg_grey}
     &:hover {
@@ -103,18 +109,18 @@ const figureStyles = {width: "100%",
                     maxWidth: "600px",
                     margin: "55px auto",
                     
-}
+};
 
 const captionStyles = {width: "100%", 
                     fontSize: "0.6em", 
                     color: "#778899",
                     textAlign: "center",
                     fontWeight: "200",
-                    margin: "15px 0" }
+                    margin: "15px 0" };
 
 const screenshotStyles = {width: "100%",
                         boxShadow: "0 0.7em 1em 0 rgba(0,0,0,.3)",
-                        borderRadius: "4px"}
+                        borderRadius: "4px"};
 
 
 const WorkSingle = (props) => {
@@ -131,39 +137,33 @@ const WorkSingle = (props) => {
     }
     
     return (
-
-        <Layout>
-        <Header/>
-
-            <SEO title={props.data.contentfulWork.title}></SEO>
-            <ThemeProvider theme={Theme}>
+    <ThemeProvider theme={Theme}>
+    <SEO title={props.data.contentfulWork.title}/>
+         <Layout>
+            <Header/>
             <WorkSingleContainer>
-
-            <Title>{props.data.contentfulWork.title}</Title>
-            <Subtitle>{props.data.contentfulWork.goal}</Subtitle>
-            <LinkContainer>
-            {props.data.contentfulWork.links.map((link, index) => (
-                <Links href={`${link}`} target="_blank" rel="noreferrer">{props.data.contentfulWork.linkTitle[index]}
-                </Links>
-            ))}
-            </LinkContainer>
+                <Title>{props.data.contentfulWork.title}</Title>
+                <Subtitle>{props.data.contentfulWork.goal}</Subtitle>
+                <LinkContainer>
+                        {props.data.contentfulWork.links.map((link, index) => (
+                        <Links href={`${link}`} target="_blank" rel="noreferrer">{props.data.contentfulWork.linkTitle[index]}
+                        </Links>
+                         ))}
+                </LinkContainer>
             </WorkSingleContainer>
-
-                        <Banner fluid={props.data.contentfulWork.bannerImage.fluid}/>
+            <Banner fluid={props.data.contentfulWork.bannerImage.fluid}/>
             <WorkSingleContainer>
-
             {documentToReactComponents(props.data.contentfulWork.description.json, options)}
            
-     <PaginationContainer>
-            {props.pageContext.previous ? (<Pagination to={`work/${props.pageContext.previous.slug}`}  rel="prev">Previous: {props.pageContext.previous.title}</Pagination>) : <span></span>}
+            <PaginationContainer>
+                {props.pageContext.previous ? (<Pagination to={`work/${props.pageContext.previous.slug}`}  rel="prev">Previous: {props.pageContext.previous.title}</Pagination>) : <span></span>}
                 
-            {props.pageContext.next ? (<Pagination to={`work/${props.pageContext.next.slug}`} rel="next">Next: {props.pageContext.next.title}</Pagination>): <Pagination to="/about">About me</Pagination>}
+                {props.pageContext.next ? (<Pagination to={`work/${props.pageContext.next.slug}`} rel="next">Next: {props.pageContext.next.title}</Pagination>): <Pagination to="/about">About me</Pagination>}
             </PaginationContainer>
             </WorkSingleContainer>
-           
-            </ThemeProvider>
-
         </Layout>
+    </ThemeProvider>
+
     )
 
 }

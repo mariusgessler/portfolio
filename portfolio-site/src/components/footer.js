@@ -12,7 +12,10 @@ font-size: 0.8rem `
 
 const FooterContainer = styled.footer`
 display:flex;
-justify-content: space-between;`
+justify-content: space-between;
+max-width: 1100px;
+margin: 0 auto;`
+
 
 const SocialContainer = styled.div``
 

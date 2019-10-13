@@ -1,15 +1,10 @@
-import React, {Component} from 'react';
+import React from 'react';
 import Header from '../components/header';
 import SEO from "../components/seo";
 import Footer from "../components/footer";
-import { ThemeProvider } from "styled-components";
 import Img from 'gatsby-image';
 import { graphql } from "gatsby";
-
 import styled from "styled-components";
-
-import Theme from "../components/theme";
-import Layout from '../components/layout';
 
 
 
@@ -37,8 +32,6 @@ flex-direction: column;
 justify-content: center;
 max-width: 650px;
 margin: 20px auto;`
-
-
 
 const Headshot = styled(Img)`
 box-shadow: 0 0.7em 1em 0 rgba(0,0,0,.3);
@@ -74,31 +67,32 @@ margin:0 0 25px;
 const About = ({data}) => {
   return (
       <>
+    <SEO title="About me" />
       <Header about={true}/>
-            <AboutWrapper>
+        <AboutWrapper>
             <AboutContainer>
-                      <Headshot fixed={data.file.childImageSharp.fixed}></Headshot>
+                <Headshot fixed={data.file.childImageSharp.fixed}></Headshot>
                 <Greeting>
                     Nice to meet you.
                 </Greeting>
                 <AboutMe>
                     I believe that technology can make the <a href="https://www.youtube.com/watch?v=B8C5sjjhsso" target="_blank">world a better place</a>. Well, maybe not every piece of technology, but I know my contribution can make a difference to solving real-world problems. I am seeking opportunities to work on projects that improve and ease the life of people around me.
                 </AboutMe>
-                 <AboutMe>
-                   Studying International Communication Management in Den Haag, learning about integrated marketing, design thinking, user research and campaign management fostered my critical and creative thinking - and while emersed in Dutch culture, I fell in love with The Netherlands.
+                <AboutMe>
+                  Studying International Communication Management in Den Haag, learning about integrated marketing, design thinking, user research and campaign management fostered my critical and creative thinking - and while emersed in Dutch culture, I fell in love with The Netherlands.
                 </AboutMe>
-                 <AboutMe>
+                <AboutMe>
                 Building on that, I followed my passion for problem-solving. Coding. I love the satifaction of creating something that didn't exist that morning. I love the constant learning, that there is no limit to improving myself. And, I love the development community, understanding how others think and solve complex issues.
                 </AboutMe>
-                 <AboutMe>
-                   Currently living in Vancouver (moving to Rotterdam in a few weeks), I enjoy the beautiful outdoors hiking and biking. Besides that, I love cooking, movies and football.
+                <AboutMe>
+                  Currently living in Vancouver (moving to Rotterdam in a few weeks), I enjoy the beautiful outdoors hiking and biking. Besides that, I love cooking, movies and football.
                 </AboutMe>
                 <AboutMe>
                 If you'd like to get in touch, feel free to send me an <a href="mailto:marius.gessler@gmail.com">email.</a>
                 </AboutMe>
-      </AboutContainer>
-      <Footer/>
+            </AboutContainer>
       </AboutWrapper>
+      <Footer/>
       </>
   )
 }
@@ -106,7 +100,7 @@ export const query = graphql`
   query {
     file(relativePath: { eq: "headshot.jpg" }) {
       childImageSharp {
-        fixed(width: 200, height: 200) {
+        fixed(width: 200, height: 200, quality: 100) {
           ...GatsbyImageSharpFixed
         }
       }

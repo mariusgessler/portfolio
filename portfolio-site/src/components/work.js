@@ -4,7 +4,7 @@ import Fade  from 'react-reveal/Fade';
 import ConditionalWrapper from "../utilis/conditional-wrapper";
 import "animate.css/animate.min.css";
 import SVG from "react-inlinesvg"; 
-import Arrow from "../images/arrow.svg";
+import Arrow from "../assets/arrow.svg";
 import Img from "gatsby-image";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
@@ -192,7 +192,7 @@ export default () => (
   <StaticQuery
     query={graphql`
       query {
-          allContentfulWork(sort: {order: DESC, fields: excerpt}){
+          allContentfulWork (sort: {fields: updatedAt, order: ASC}){
               edges {
                   node {
                       description {

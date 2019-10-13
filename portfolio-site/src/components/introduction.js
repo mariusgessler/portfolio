@@ -86,10 +86,8 @@ font-size: 1.3rem;
   }
 `
 
-
 const PortraitGroup = styled.div`
 animation: fadein 3s;
-
 `
 
 const PortraitImg = styled.img`
@@ -97,7 +95,6 @@ max-height: 350px;
 margin: 0 auto;
 display: block;
 animation: fadein 2s; 
- 
 
   @media (min-width: 375px) {
     max-height: 470px;
@@ -128,12 +125,12 @@ animation: fadein 2s;
 
 
 
-const Introduction = props => (
+const Introduction = () => (
  
 <ThemeProvider theme={Theme}>
   <IntroContainer>
      <PortraitGroup>
-        <PortraitImg src={Portrait} alt="Image trace of myself" />   
+        <PortraitImg src={Portrait} alt="Imagetrace of myself" />   
       </PortraitGroup>
       <IntroductionGroup>
         <Greeting>Hi, I'm Marius.</Greeting>
