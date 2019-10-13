@@ -6,7 +6,6 @@ import styled from "styled-components";
 
 const HeaderContainer = styled.header`
 `
-
 const Nav = styled.nav`
 `
 
@@ -29,7 +28,6 @@ color:${props => props.theme.mg_grey}
         color: ${props => props.theme.mg_blue}
     }
 }`
-
 
 // If current page is "about", don't <Link to="about"> 
 const Header = ({about}) => (

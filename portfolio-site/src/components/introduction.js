@@ -123,8 +123,6 @@ animation: fadein 2s;
 }
 `
 
-
-
 const Introduction = () => (
  
 <ThemeProvider theme={Theme}>

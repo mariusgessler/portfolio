@@ -16,7 +16,6 @@ justify-content: space-between;
 max-width: 1100px;
 margin: 0 auto;`
 
-
 const SocialContainer = styled.div``
 
 const SocialIcon = styled(SVG)`
@@ -33,9 +32,6 @@ transition: width 0.5s ease;
     width: 20px;
     }
 `
-
-
-
 
 const Footer = () => (
     
