@@ -1,7 +1,5 @@
 # Portfolio
 
-![Featured Image Portfolio](https://i.ibb.co/wzWtwZD/portrait.png)
-
 A platform, which enables me to experiment with new technology and show my work.
 
 Take a look at the [live-version](https://mariusgessler.com).
