@@ -1,16 +1,11 @@
 # Portfolio
 
-![Featured Image Portfolio](https://i.ibb.co/ZKfGrxw/portfolio-featured.jp)
+![Featured Image Portfolio](https://i.ibb.co/wzWtwZD/portrait.png)
 
 A platform, which enables me to experiment with new technology and show my work.
 
 Take a look at the [live-version](https://mariusgessler.com).
  
-
-## Motivation 
-
-I wanted a personal website that is snappy, slick and easy to update with new content - the JAMStack was the perfect fit.
-
 ## Technologies 
 
 Built with: 
