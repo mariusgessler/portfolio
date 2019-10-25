@@ -88,6 +88,11 @@ font-size: 1.3rem;
 
 const PortraitGroup = styled.div`
 animation: fadein 3s;
+height: 65vh;
+
+  @media (min-width: 700px) {
+    height: auto;
+  }
 `
 
 const PortraitImg = styled.img`

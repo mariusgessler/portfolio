@@ -79,10 +79,10 @@ const About = ({data}) => {
                     I believe that technology can make the <a href="https://www.youtube.com/watch?v=B8C5sjjhsso" target="_blank" rel="noreferrer">world a better place</a>. Well, maybe not every piece of technology, but I know my contribution can make a difference to solving real-world problems. I am seeking opportunities to work on projects that improve and ease the life of people around me.
                 </AboutMe>
                 <AboutMe>
-                  Studying International Communication Management in Den Haag, learning about integrated marketing, design thinking, user research and campaign management fostered my critical and creative thinking - and while emersed in Dutch culture, I fell in love with The Netherlands.
+                  Studying International Communication Management in Den Haag, learning about integrated marketing, design thinking, user research, and campaign management fostered my critical and creative thinking - and while emersed in Dutch culture, I fell in love with The Netherlands.
                 </AboutMe>
                 <AboutMe>
-                Building on that, I followed my passion for problem-solving. Coding. I love the satifaction of creating something that didn't exist that morning. I love the constant learning, that there is no limit to improving myself. And, I love the development community, understanding how others think and solve complex issues.
+                Building on that, I followed my passion for problem-solving. Coding. I love the satisfaction of creating something that didn't exist that morning. I love the constant learning, that there is no limit to improving myself. And, I love the development community, understanding how others think and solve complex issues.
                 </AboutMe>
                 <AboutMe>
                   Currently living in Vancouver (moving to Rotterdam in a few weeks), I enjoy the beautiful outdoors hiking and biking. Besides that, I love cooking, movies and football.

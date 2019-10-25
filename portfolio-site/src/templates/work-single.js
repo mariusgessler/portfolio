@@ -107,20 +107,21 @@ color:${props => props.theme.mg_grey}
 
 const figureStyles = {width: "100%",
                     maxWidth: "600px",
-                    margin: "55px auto",
-                    
-};
+                    margin: "55px auto", 
+                    };
 
 const captionStyles = {width: "100%", 
                     fontSize: "0.6em", 
                     color: "#778899",
                     textAlign: "center",
                     fontWeight: "200",
-                    margin: "15px 0" };
+                    margin: "15px 0" 
+                    };
 
-const screenshotStyles = {width: "100%",
+const screenshotStyles = {maxWidth: "100%",
                         boxShadow: "0 0.7em 1em 0 rgba(0,0,0,.3)",
-                        borderRadius: "4px"};
+                        borderRadius: "4px"
+                        };
 
 
 const WorkSingle = (props) => {
