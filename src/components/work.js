@@ -144,12 +144,12 @@ class Work extends Component {
       window.addEventListener('resize', this.updateWindowDimensions);
     }
 
-    componentWillUnmount(){
+    componentWillUnmount() {
       window.removeEventListener('resize', this.updateWindowDimensions);
     }
 
-    updateWindowDimensions = () => {
-      this.setState({width: window.innerWidth})
+    updateWindowDimensions() {
+      this.setState({ width: window.innerWidth });
     }
   
     render () {
