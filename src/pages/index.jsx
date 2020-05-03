@@ -4,11 +4,12 @@ import { Link } from 'gatsby';
 import SEO from '../components/seo';
 import Introduction from '../components/introduction';
 import Work from '../components/work';
+import Bar from '../components/topbar';
 import Theme from '../components/theme';
 import Footer from '../components/footer';
 
 const IndexContainer = styled.div`
-padding: 0.7em;
+padding: 1.2em;
   @media (min-width: 700px) {
     padding: 0.7em 2em;
   }
@@ -17,7 +18,7 @@ padding: 0.7em;
     margin: 0 auto;
   }
   @media (min-width: 1100px) {
-    width: calc(960px - 1.4rem);
+    width: calc(860px - 1.4rem);
     margin: 0 auto;
   }`;
 
@@ -37,6 +38,7 @@ const IndexPage = () => (
   <>
     <SEO title="Portfolio" />
     <ThemeProvider theme={Theme}>
+      <Bar />
       <IndexContainer>
         <Introduction />
         <Work />

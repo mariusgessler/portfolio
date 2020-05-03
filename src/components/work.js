@@ -9,6 +9,10 @@ import Img from "gatsby-image";
 import styled from "styled-components";
 import { ThemeProvider } from "styled-components";
 import Theme from "../components/theme";
+import House from '../images/house.svg'
+import Key from '../images/key.svg'
+import Satellite from '../images/satellite.svg'
+import Paperplane from '../images/paperplane.svg'
 
 const WorkContainer = styled.div`
 margin: 50px auto 0;
@@ -149,7 +153,8 @@ class Work extends Component {
     }
 
     updateWindowDimensions() {
-      this.setState({ width: window.innerWidth });
+      console.log('test')
+      // this.setState({ width: window.innerWidth });
     }
   
     render () {
@@ -159,9 +164,11 @@ class Work extends Component {
           {this.props.edges.map(edge => (
               <WorkItem>
                 <Link to={`work/${edge.node.slug}`}>
-                  <FeaturedImageContainer>
+                  {/* <FeaturedImageContainer>
                     <FeaturedImage fluid={edge.node.featuredImage.fluid}></FeaturedImage>
-                  </FeaturedImageContainer>
+                  </FeaturedImageContainer> */}
+                          <img src={Paperplane} alt="Imagetrace of myself" />
+
                 </Link>
                 
               <ConditionalWrapper condition={this.state.width < 700} ifWrapper={children => <Fade right>  {children} </Fade>} elseWrapper={children => <Fade duration={500} bottom big>  {children} </Fade>} >

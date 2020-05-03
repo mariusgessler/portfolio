@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200;400&family=Spectral:wght@300;400;500&display=swap');
+
+p,span {
+  color: #145374;
+  text-decoration: none;
+  font-weight: 500;
+  font-family: 'Montserrat', sans-serif;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+h1,h2,h3,h4 {
+  color: #145374;
+}
+
+li {
+  color: #145374;
+  padding-left: 0;
+}
+
+ul {
+  list-style-type: circle;
+}

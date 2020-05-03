@@ -1,7 +1,7 @@
 import React from "react"
 import Footer from "./footer"
-import "./layout.css"
-import './typography.css'
+import '../styles/layout.css'
+import '../styles/typography.css'
 
 const Layout = (props) => {
   return (
