@@ -1,6 +1,4 @@
 import { Link } from "gatsby";
-import { ThemeProvider } from "styled-components";
-import Theme from "../components/theme";
 import React from "react";
 import styled from "styled-components";
 
@@ -32,7 +30,6 @@ color:${props => props.theme.mg_grey}
 // If current page is "about", don't <Link to="about"> 
 const Header = ({about}) => (
 
-  <ThemeProvider theme={Theme}>
     <HeaderContainer>
       <Nav>
         <Ul>
@@ -48,7 +45,6 @@ const Header = ({about}) => (
         </Ul>
       </Nav>
     </HeaderContainer>
-  </ThemeProvider>
  
 )
 

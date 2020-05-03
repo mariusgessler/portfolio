@@ -1,10 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { ThemeProvider } from "styled-components";
-import Theme from "../components/theme";
 import SVG from "react-inlinesvg";
-import LinkedIn from "../assets/linkedin.svg";
-import GitHub from "../assets/github.svg";
+import LinkedIn from "../assets/icons/linkedin.svg";
+import GitHub from "../assets/icons/github.svg";
 
 const Copyright = styled.p`
 color:${props => props.theme.mg_grey};
@@ -35,7 +33,6 @@ transition: width 0.5s ease;
 
 const Footer = () => (
     
-        <ThemeProvider theme={Theme}>
             <FooterContainer>
                 <SocialContainer>
                     <a href="https://www.linkedin.com/in/marius-gessler" target="_blank" rel="noreferrer"><SocialIcon src={LinkedIn}/></a>
@@ -45,7 +42,6 @@ const Footer = () => (
                     2019, Marius Gessler
                 </Copyright>
             </FooterContainer>
-        </ThemeProvider>
         
     )
 
