@@ -2,7 +2,7 @@ const projects = [
   {
     title: 'Generated Static Site (JAM): Portfolio',
     illustration: 'portfolio',
-    description: 'I created this personal website to showcase some of my recent work - and experiment with new technology. You’re currently on it.🙂',
+    description: 'I created this personal website to showcase some of my recent work - and experiment with new technology. You’re currently on it. :-)',
     tools: [
       'gatsby', 'graphql', 'sass', 'contentful',
     ],
@@ -20,7 +20,7 @@ const projects = [
     tools: [
       'express', 'javascript', 'firebase',
     ],
-    links: [
+    links: 
       {
         type: 'live',
         link: 'https://t.me/boredinthehouse_bot'
