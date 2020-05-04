@@ -6,6 +6,7 @@ import Hero from '../components/hero';
 import Work from '../components/work';
 import ScrollProgress from '../components/scrollprogress';
 import Footer from '../components/footer';
+import About from '../components/about';
 import '../css/styles.scss';
 
 const Container = styled.div`
@@ -41,6 +42,7 @@ const IndexPage = () => (
       <Hero />
       <Work />
       <Footer />
+      <About />
       </div>
     </div>
 

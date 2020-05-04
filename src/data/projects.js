@@ -20,10 +20,10 @@ const projects = [
     tools: [
       'express', 'javascript', 'firebase',
     ],
-    links: 
+    links: [
       {
         type: 'live',
-        link: 'https://t.me/boredinthehouse_bot'
+        link: 'https://t.me/boredinthehouse_bot',
       },
       {
         type: 'github',

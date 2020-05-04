@@ -20,10 +20,10 @@ const WorkItem = (props) => {
           </div>
           <div className="row between-xs">
             <div className="col-xs-6">
-              <Tools tools={item.tools} />
+              <Tools key={item.title} tools={item.tools} />
             </div>
             <div className="col-xs-6">
-              <Links links={item.links} />
+              <Links key={item.title} links={item.links} />
             </div>
           </div>
         </div>
@@ -33,11 +33,11 @@ const WorkItem = (props) => {
 };
 
 WorkItem.defaultProps = {
-  item: PropTypes.arrayOf(PropTypes.object),
+  item: PropTypes.objectOf(PropTypes.array),
 };
 
 WorkItem.propTypes = {
-  item: PropTypes.arrayOf(PropTypes.object),
+  item: PropTypes.objectOf(PropTypes.array),
 };
 
 export default WorkItem;

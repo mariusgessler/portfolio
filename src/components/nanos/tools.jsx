@@ -12,11 +12,11 @@ const Tools = (props) => {
 };
 
 Tools.defaultProps = {
-  tools: PropTypes.arrayOf(PropTypes.array),
+  tools: PropTypes.arrayOf(PropTypes.string),
 };
 
 Tools.propTypes = {
-  tools: PropTypes.arrayOf(PropTypes.array),
+  tools: PropTypes.arrayOf(PropTypes.string),
 };
 
 export default Tools;
