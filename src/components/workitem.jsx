@@ -1,14 +1,16 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import Tools from './nanos/tools';
+import Links from './nanos/links';
 
 const WorkItem = (props) => {
   const { item } = props;
   return (
-    <div className="section section--work">
+    <div className="section--work__item">
       <div className="row center-xs middle-sm around-md">
         <div className="col col-xs-12 col-sm-6 start-sm">
           <div className="img__wrapper fade-in">
-            <img src="props" alt="props" />
+            <img src={require(`../assets/illustrations/${item.illustration}.svg`)} alt={`${item.illustration}`} />
           </div>
         </div>
         <div className="col col-xs-12 col-sm-4">
@@ -18,10 +20,10 @@ const WorkItem = (props) => {
           </div>
           <div className="row between-xs">
             <div className="col-xs-6">
-              "Logos"
+              <Tools tools={item.tools} />
             </div>
             <div className="col-xs-6">
-              "Links"
+              <Links links={item.links} />
             </div>
           </div>
         </div>
