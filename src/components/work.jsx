@@ -28,7 +28,9 @@ const Work = () => {
 
   return (
     <div className="section section--work">
-      {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+      <div className="row center-xs middle-sm between-md">
+        {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+      </div>
     </div>
   );
 };

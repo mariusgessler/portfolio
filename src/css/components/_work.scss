@@ -1,0 +1,21 @@
+.section--work {
+  position: relative;
+  padding-top: 160px;
+  margin-top: 95vh;
+  z-index: 2;
+
+  &:before {
+      position: absolute;
+      top: 0;
+      left: 50%;
+      z-index: -1;
+      display: block;
+      width: 100vw;
+      height: calc(100% + 160px);
+      content: "";
+      background-color: palette(blue);
+      -webkit-transform: translate(-50%);
+      transform: translate(-50%);
+      box-shadow: $box-shadow;
+  }
+}

@@ -6,18 +6,19 @@ import Links from './nanos/links';
 const WorkItem = (props) => {
   const { item } = props;
   return (
+    <div className="col col-xs-12 col-sm-3">
+      <a href={`${item.links.link}`} rel="noreferrer noopener" target="_blank">
     <div className="section--work__item">
-      <div className="row center-xs middle-sm around-md">
-        <div className="col col-xs-12 col-sm-6 start-sm">
+      <h3 className ="caption">{item.title}</h3>
           <div className="img__wrapper fade-in">
             <img src={require(`../assets/illustrations/${item.illustration}.svg`)} alt={`${item.illustration}`} />
           </div>
-        </div>
-        <div className="col col-xs-12 col-sm-4">
           <div className="description text__wrapper">
-            <h3>{item.title}</h3>
-            <p>{item.description}</p>
-          </div>
+            <p className="description">{item.description}</p>
+        </div>
+        <Links key={item.title} links={item.links} />
+
+        {/* <div className="col col-xs-12 col-sm-4">
           <div className="row between-xs">
             <div className="col-xs-6">
               <Tools key={item.title} tools={item.tools} />
@@ -26,9 +27,11 @@ const WorkItem = (props) => {
               <Links key={item.title} links={item.links} />
             </div>
           </div>
-        </div>
+        </div> */}
       </div>
-    </div>
+      </a>
+
+      </div>
   );
 };
 
