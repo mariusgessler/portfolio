@@ -527,3 +527,51 @@
 
   transition: $value;
 }
+
+@mixin gradientAnimation( $start, $end, $transTime ){
+  background-size: 100%;
+  background-image: linear-gradient($start, $end);
+  position: relative;
+  z-index: 100;
+  &:before {
+      background-image: linear-gradient($end, $start);
+      content: "";
+      display: block;
+      border-radius: 30px;
+
+      height: 100%;
+      position: absolute;
+      top: 0; left: 0;
+      opacity: 0;
+      width: 100%;
+      z-index: -100;
+      transition: opacity $transTime;
+  }
+  &:hover {
+      &:before {
+          opacity: 1;
+      }
+  }
+}
+
+@mixin neumorphicBlue($radius, $state) {
+  @include gradientAnimation(#124b68, #15597c, .3s);
+  border-radius: $radius;
+  transition: background 1s ease-in-out;
+
+  @if $state == hover{
+    background: linear-gradient(145deg, #124b68, #15597c);
+    box-shadow:  20px 20px 60px #114763, 
+    -20px -20px 60px #175f85;
+  } 
+  @else if $state == clicked{
+    box-shadow: inset 20px 20px 60px #114763, 
+            inset -20px -20px 60px #175f85;
+  }
+
+  @else {
+    background: #145374;
+    box-shadow:  20px 20px 60px #114763, 
+             -20px -20px 60px #175f85;
+  }
+}

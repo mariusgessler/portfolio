@@ -1,8 +1,10 @@
 @import 'animations', 'reset', 'colors', 'utilities', 'variables', 'grid', 'typography';
 
 // Components
+@import './components/about';
 @import './components/tools';
 @import './components/hero';
+@import './components/links';
 @import './components/scrollprogress';
+@import './components/work';
 @import './components/workitem';
-
