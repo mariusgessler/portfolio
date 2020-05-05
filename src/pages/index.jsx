@@ -1,10 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import SEO from '../components/seo';
+import SEO from '../components/nanos/seo';
 import Hero from '../components/hero';
 import Work from '../components/work';
-import ScrollProgress from '../components/scrollprogress';
+import ScrollProgress from '../components/nanos/scrollprogress';
 import Footer from '../components/footer';
 import About from '../components/about';
 import '../css/styles.scss';
