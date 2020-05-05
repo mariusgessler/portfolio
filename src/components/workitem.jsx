@@ -15,8 +15,8 @@ const WorkItem = (props) => {
         </div>
         <div className="col col-xs-12 col-sm-4">
           <div className="description text__wrapper">
-            <h1>{item.title}</h1>
-            <h2>{item.description}</h2>
+            <h3>{item.title}</h3>
+            <p>{item.description}</p>
           </div>
           <div className="row between-xs">
             <div className="col-xs-6">

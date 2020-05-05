@@ -25,8 +25,8 @@ const About = () => {
       <div className="row center-xs middle-sm around-md">
         <div className="col col-xs-12 col-sm-4">
           <div className="description text__wrapper">
-            <h1>{getAbout().title}</h1>
-            {getAbout().content.split('\n').map((i) => <h2 key={i}>{i}</h2>)}
+            <h3>{getAbout().title}</h3>
+            {getAbout().content.split('\n').map((i) => <p key={i}>{i}</p>)}
           </div>
         </div>
         <div className="col col-xs-12 col-sm-6 start-sm">

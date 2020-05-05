@@ -1,7 +1,7 @@
-@import url('https://fonts.googleapis.com/css?family=Karla:400,700|Spectral:300,400,700&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:300,400,500|Karla&display=swap');
 
 $font-sans: 'Karla', sans-serif;
-$font-serif: 'Spectral' ,serif;
+$font-serif: 'Inconsolata' ,serif;
 
 %font-sans {
   font-family: $font-sans;
@@ -11,19 +11,32 @@ $font-serif: 'Spectral' ,serif;
   font-family: $font-serif;
 }
 
+h1, h3 {
+  font-family: $font-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+
+}
+
 h1 {
-  font-family: $font-sans;
   font-size: em(14px);
-  font-weight: 100;
 
   @include breakpoint(sm) {
     font-size: em(18px);
   }
 }
 
+h3 {
+  font-size: em(10px);
+
+  @include breakpoint(sm) {
+    font-size: em(14px);
+  }
+}
+
 h2 {
-  font-family: $font-serif;
-  font-weight: 200;
+  font-family: $font-sans;
+  font-weight: 100;
   font-size: em(18px);
   margin-top: 0;
 
@@ -38,7 +51,7 @@ a {
 }
 
 p {
-  margin: 14px 0;
+  font-family: $font-sans;
   font-size: em(20px);
   line-height: 1.5;
 }
