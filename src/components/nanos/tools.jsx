@@ -5,8 +5,8 @@ const Tools = (props) => {
   const { tools } = props;
 
   return (
-    <div className="tool-logos">
-      {tools.map((tool) => <img src={require(`../../assets/icons/${tool}.svg`)} alt={`${tool}`} />)}
+    <div className="tool-logos__wrapper">
+      {tools.map((tool) => <img src={require(`../../assets/icons/${tool}.svg`)} alt={`${tool}`} className="tool-logos__item" />)}
     </div>
   );
 };
