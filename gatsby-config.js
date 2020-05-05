@@ -12,11 +12,20 @@ module.exports = {
     'gatsby-plugin-catch-links',
     'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
+    'gatsby-transformer-json',
     {
       resolve: 'gatsby-source-filesystem',
       options: {
         name: 'pages',
         path: `${__dirname}/src/pages`,
+      },
+    },
+    'gatsby-transformer-json',
+    {
+      resolve: 'gatsby-source-filesystem',
+      name: 'data',
+      options: {
+        path: `${__dirname}/src/data`,
       },
     },
     {
@@ -39,13 +48,6 @@ module.exports = {
       options: {
         spaceId: process.env.GATSBY_SPACE_ID,
         accessToken: process.env.GATSBY_ACCESS_TOKEN,
-      },
-    },
-    {
-      resolve: 'gatsby-source-filesystem',
-      options: {
-        name: 'images',
-        path: `${__dirname}/src/images`,
       },
     },
     'gatsby-transformer-sharp',

@@ -1,11 +1,39 @@
 import React from 'react';
+import { useStaticQuery, graphql } from 'gatsby';
 import WorkItem from './workitem';
-import projects from '../data/projects';
 
-const Work = () => (
-  <div className="section section--work">
-    {projects.map((project) => <WorkItem key={project.title} item={project} />)}
-  </div>
-);
+const Work = () => {
+  const data = useStaticQuery(graphql`
+    query ProjectsQuery {
+      allProjectsJson {
+        edges {
+          node {
+            title
+            description
+            illustration
+            tools
+            links {
+              type
+              link
+            }
+          }
+        }
+      }
+    }`);
+
+    console.log('Work?', data)
+
+  const getProjects = () => {
+    const projects = data.allProjectsJson.edges.map((item) => item.node);
+    console.log(projects)
+    return projects;
+  };
+
+  return (
+    <div className="section section--work">
+      {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+    </div>
+  );
+};
 
 export default Work;

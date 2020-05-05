@@ -41,8 +41,9 @@ const IndexPage = () => (
       <div className="container-fluid">
       <Hero />
       <Work />
-      <Footer />
       <About />
+      <Footer />
+
       </div>
     </div>
 
