@@ -21,11 +21,8 @@ const Work = () => {
       }
     }`);
 
-    console.log('Work?', data)
-
   const getProjects = () => {
     const projects = data.allProjectsJson.edges.map((item) => item.node);
-    console.log(projects)
     return projects;
   };
 
