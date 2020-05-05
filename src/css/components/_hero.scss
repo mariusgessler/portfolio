@@ -1,9 +1,14 @@
 .section--hero {
-  height: 70vh;
+  position: fixed;
+  top: 0;
+  z-index: -1;
+  height: 100vh;
   margin-top: 60px;
   @include breakpoint(sm) {
-    height: 60vh;
-    margin-top: 100px;
+    display: flex;
+    align-items: middle;
+    height: 95vh;
+    margin: 0;
   }
   .row {
     flex-direction: column-reverse;

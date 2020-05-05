@@ -3,7 +3,7 @@ import portrait from '../assets/illustrations/portrait.svg';
 
 const Hero = () => (
   <div className="section section--hero">
-    <div className="row center-xs middle-sm around-md">
+    <div className="row center-xs middle-sm between-sm">
       <div className="col col-xs-12 col-sm-4">
         <div className="introduction text__wrapper">
           <h1>Hi, I&apos;m Marius.</h1>
@@ -21,7 +21,7 @@ const Hero = () => (
           </h2>
         </div>
       </div>
-      <div className="col col-xs-12 col-sm-6 end-sm">
+      <div className="col col-xs-12 col-sm-4">
         <div className="img__wrapper fade-in">
           <img src={portrait} alt="Imagetrace of Marius" />
         </div>
