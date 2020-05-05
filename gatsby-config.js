@@ -60,7 +60,7 @@ module.exports = {
         background_color: '#145374',
         theme_color: '#145374',
         display: 'minimal-ui',
-        icon: 'src/images/portrait.png', // This path is relative to the root of the site.
+        icon: `${__dirname}/src/images/favicon.png`,
       },
     },
     'gatsby-transformer-remark',
