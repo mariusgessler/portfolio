@@ -7,9 +7,11 @@ const Links = (props) => {
   return (
     <div className="links__wrapper">
       {links.map((link) => (
-        <a href={`${link.link}`} rel="noreferrer noopener" target="_blank" className="links__item">
-          <img src={require(`../../assets/icons/${link.type}.svg`)} alt={`${link.type}`} />
-        </a>
+        <div className="link__container">
+          <a href={`${link.link}`} rel="noreferrer noopener" target="_blank" className="links__item">
+            <img src={require(`../../assets/icons/${link.type}.svg`)} alt={`${link.type}`} />
+          </a>
+        </div>
       ))}
     </div>
   );

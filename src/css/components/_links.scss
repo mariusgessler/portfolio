@@ -1,8 +1,35 @@
 .links__wrapper {
     display: flex;
 
-  .links__item {
-    width: 25px;
+  .link__container {
     border-radius: 100%;
+    img {
+      width: 25px;
+    }
   }
+}
+.section--footer {
+  .links__wrapper {
+    .link__container {
+        @include neumorphicGrey(50%, normal);
+        position: relative;
+        width: 35px;
+        height: 35px;
+
+        &:first-child {
+            margin-right: 15px;
+        }
+    }
+    
+    .links__item {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        img {
+            width: 25px;
+
+        };
+    }
+}
 }
