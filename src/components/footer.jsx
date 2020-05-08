@@ -13,13 +13,15 @@ const Footer = () => {
 
   return (
     <div className="section section--footer">
-      <div className="container-fluid">
-        <div className="row">
-          <div className="col col-xs-12 col-md-6">
-            <Links links={socials} />
-          </div>
-          <div className="col col-xs-12 col-md-6">
-            <h3>Copyright, 2020</h3>
+      <div className="container">
+        <div className="container-fluid">
+          <div className="row">
+            <div className="col col-xs-12 col-md-6">
+              <Links links={socials} />
+            </div>
+            <div className="col col-xs-12 col-md-6">
+              <h3>Copyright, 2020</h3>
+            </div>
           </div>
         </div>
       </div>
