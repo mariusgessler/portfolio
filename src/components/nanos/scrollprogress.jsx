@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useCallback } from 'react';
 
 const ScrollProgress = () => {
-  const [width, setWidth] = useState('');
+  const [width, setWidth] = useState(0);
 
   const onScroll = useCallback(() => {
     const scrollPx = document.documentElement.scrollTop;
