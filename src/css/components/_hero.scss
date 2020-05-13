@@ -1,13 +1,16 @@
 .section--hero {
   position: fixed;
   top: 0;
-  z-index: -1;
-  height: 100vh;
+
+  z-index: -2;
+  // height: 100vh;
   margin-top: 60px;
   @include breakpoint(sm) {
     display: flex;
     align-items: middle;
-    height: 95vh;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%);
     margin: 0;
   }
   .row {
@@ -31,6 +34,11 @@
 
     h1, h2 {
       color: palette(blue);
+      max-width: 260px;
+
+      @include screen-min(375px) {
+        max-width: 100%;
+      }
     }
 
     .img__wrapper {
@@ -39,8 +47,12 @@
       }
       img {
         display: block;
-        height: 370px;
+        height: 270px;
         margin: 0 auto;
+
+        @include screen-min(375px) {
+          height: 340px;
+        }
 
         @include breakpoint(sm) {
           display: inline;
