@@ -1,0 +1,10 @@
+.wave {
+  position: absolute;
+  left: 50%;
+  bottom: -260px;
+  transform: translate(-50%);
+  width: 100%;
+  max-width: 100vw;
+  fill: white;
+  z-index: 99;
+}

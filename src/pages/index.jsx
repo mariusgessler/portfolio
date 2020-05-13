@@ -8,16 +8,15 @@ import About from '../components/about';
 import '../css/styles.scss';
 
 const IndexPage = () => (
-  <div className="container">
-    <div className="container-fluid">
-      <SEO title="Portfolio" />
-      <ScrollProgress />
-      <Hero />
-      <Work />
-      <About />
-      <Footer />
-    </div>
-  </div>
+  <>
+    <SEO title="Portfolio" />
+    <ScrollProgress />
+    <Hero />
+    <Work />
+    <About />
+    <Footer />
+  </>
+
 );
 
 export default IndexPage;
