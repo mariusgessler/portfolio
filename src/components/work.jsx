@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import WorkItem from './workitem';
+import Wave from './nanos/wave';
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -28,9 +29,14 @@ const Work = () => {
 
   return (
     <div className="section section--work">
-      <div className="row center-xs middle-sm between-md">
-        {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+      <div className="container">
+        <div className="container-fluid">
+          <div className="row center-xs middle-sm between-md">
+            {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+          </div>
+        </div>
       </div>
+      <Wave />
     </div>
   );
 };
