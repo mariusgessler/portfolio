@@ -10,7 +10,6 @@ module.exports = {
   plugins: [
     'gatsby-plugin-react-helmet',
     'gatsby-plugin-catch-links',
-    'gatsby-plugin-styled-components',
     'gatsby-plugin-sass',
     'gatsby-transformer-json',
     {
@@ -48,6 +47,14 @@ module.exports = {
       options: {
         spaceId: process.env.GATSBY_SPACE_ID,
         accessToken: process.env.GATSBY_ACCESS_TOKEN,
+      },
+    },
+    {
+      resolve: 'gatsby-plugin-react-svg',
+      options: {
+        rule: {
+          include: `${__dirname}/src/assets/background/`,
+        },
       },
     },
     'gatsby-transformer-sharp',
