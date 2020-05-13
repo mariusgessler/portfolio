@@ -3,11 +3,11 @@ import Links from './nanos/links';
 
 const Footer = () => {
   const socials = [{
-    type: 'linkedin',
-    link: 'https://www.linkedin.com/in/marius-gessler/'
+    type: 'linkedin_blue',
+    link: 'https://www.linkedin.com/in/marius-gessler/',
   },
   {
-    type: 'github',
+    type: 'github_blue',
     link: 'https://github.com/mariusgessler/',
   }];
 
@@ -15,12 +15,12 @@ const Footer = () => {
     <div className="section section--footer">
       <div className="container">
         <div className="container-fluid">
-          <div className="row">
+          <div className="row between-xs">
             <div className="col col-xs-12 col-md-6">
               <Links links={socials} />
             </div>
-            <div className="col col-xs-12 col-md-6">
-              <h3>Copyright, 2020</h3>
+            <div className="col col-xs-12 col-md-6 end-xs">
+              <h3>Marius Gessler, 2020</h3>
             </div>
           </div>
         </div>
