@@ -528,7 +528,7 @@
   transition: $value;
 }
 
-@mixin gradientAnimation( $start, $end, $transTime ){
+@mixin gradientAnimation( $start, $end, $transTime, $radius ){
   background-size: 100%;
   background-image: linear-gradient($start, $end);
   position: relative;
@@ -537,8 +537,7 @@
       background-image: linear-gradient($end, $start);
       content: "";
       display: block;
-      border-radius: 30px;
-
+      border-radius: $radius;
       height: 100%;
       position: absolute;
       top: 0; left: 0;
@@ -555,7 +554,7 @@
 }
 
 @mixin neumorphicBlue($radius, $state) {
-  @include gradientAnimation(#124b68, #15597c, .3s);
+  @include gradientAnimation(#124b68, #15597c, .3s, 30px);
   border-radius: $radius;
   transition: background 1s ease-in-out;
 
@@ -575,3 +574,28 @@
              -20px -20px 60px #175f85;
   }
 }
+
+@mixin neumorphicGrey($radius, $state) {
+  // @include gradientAnimation(#b9b9b9, #dcdcdc, .3s, 50%);
+  // border-radius: $radius;
+  // transition: background 1s ease-in-out;
+
+  // @if $state == hover{
+  //   background: linear-gradient(145deg, #b9b9b9, #dcdcdc);
+  //   box-shadow:  41px 41px 82px #a9a9a9, 
+  //                -41px -41px 82px #f3f3f3;
+  // } 
+  // @else if $state == clicked{
+  //   background: #cecece;
+  //   box-shadow: inset 41px 41px 82px #a9a9a9, 
+  //               inset -41px -41px 82px #f3f3f3;
+  // }
+  border-radius: $radius;
+  background: #f9f9f9;
+  box-shadow:  5px 5px 9px #cccccc, 
+               -5px -5px 9px #ffffff;
+
+  // }
+}
+
+
