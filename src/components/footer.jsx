@@ -16,10 +16,10 @@ const Footer = () => {
       <div className="container">
         <div className="container-fluid">
           <div className="row between-xs">
-            <div className="col col-xs-12 col-md-6">
+            <div className="col col-xs-12 col-sm-6">
               <Links links={socials} />
             </div>
-            <div className="col col-xs-12 col-md-6 end-xs">
+            <div className="col col-xs-12 col-sm-6 end-xs">
               <h3>Marius Gessler, 2020</h3>
             </div>
           </div>

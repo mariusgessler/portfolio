@@ -576,26 +576,26 @@
 }
 
 @mixin neumorphicGrey($radius, $state) {
-  // @include gradientAnimation(#b9b9b9, #dcdcdc, .3s, 50%);
-  // border-radius: $radius;
-  // transition: background 1s ease-in-out;
-
-  // @if $state == hover{
-  //   background: linear-gradient(145deg, #b9b9b9, #dcdcdc);
-  //   box-shadow:  41px 41px 82px #a9a9a9, 
-  //                -41px -41px 82px #f3f3f3;
-  // } 
-  // @else if $state == clicked{
-  //   background: #cecece;
-  //   box-shadow: inset 41px 41px 82px #a9a9a9, 
-  //               inset -41px -41px 82px #f3f3f3;
-  // }
+  @include gradientAnimation(#b9b9b9, #dcdcdc, .3s, 4px);
   border-radius: $radius;
-  background: #f9f9f9;
-  box-shadow:  5px 5px 9px #cccccc, 
-               -5px -5px 9px #ffffff;
+  transition: background 1s ease-in-out;
 
-  // }
+  // @if $state == hover {
+  //   background: linear-gradient(145deg, #dcdcdc, #ffffff);
+  //   box-shadow:  4px 4px 6px #bdbdbd, 
+  //            -4px -4px 6px #ffffff;
+  // } 
+  @if $state == clicked {
+    background: #f4f4f4;
+    box-shadow: inset 4px 4px 6px #bdbdbd, 
+            inset -4px -4px 6px #ffffff;
+  }
+
+  @else {
+    background: #f4f4f4;
+    box-shadow:  4px 4px 7px #bdbdbd, 
+                 -4px -4px 7px #ffffff;
+  }
 }
 
 
