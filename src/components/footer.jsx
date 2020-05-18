@@ -21,7 +21,7 @@ const Footer = () => {
         <div className="container-fluid">
           <div className="row between-xs middle-sm">
             <div className="col col-xs-12 col-sm-6">
-              <Links links={socials} />
+              <Links a links={socials} />
             </div>
             <div className="col col-xs-12 col-sm-6 end-sm">
               <h3>Marius Gessler, 2020</h3>

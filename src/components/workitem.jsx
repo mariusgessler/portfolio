@@ -17,7 +17,7 @@ const WorkItem = (props) => {
           <div className="description text__wrapper">
             <p className="description">{item.description}</p>
           </div>
-          <Links key={keyProvider()} links={item.links} />
+          <Links a={false} key={keyProvider()} links={item.links} />
         </a>
       </div>
     </div>
