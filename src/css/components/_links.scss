@@ -1,0 +1,45 @@
+.links__wrapper {
+    display: inline;
+
+  .link__container {
+    border-radius: 100%;
+    img {
+      width: 20px;
+
+      @include breakpoint(sm) {
+        width: 25px;
+      }
+    }
+  }
+}
+
+.section--footer {
+  .links__wrapper {
+    .link__container {
+      @include neumorphicGrey(5px, normal);
+      width: 35px;
+      height: 35px;
+
+      &:first-child {
+        margin-right: 15px;
+      }
+
+      &:active {
+        @include neumorphicGrey(5px, clicked)
+      }
+    }
+    
+    .links__item {
+      display: inline-block;
+
+      img {
+        display: block;
+        position: relative;
+        top: 50%;
+        left: 50%;
+        width: 20px;
+        transform: translate(-50%, -50%);
+      };
+    }
+  }
+}

@@ -1,0 +1,16 @@
+.section--scrollbar {
+  .bar__container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 5px;
+    z-index: 99;
+    background-color: palette(grey, light);
+
+    .bar {
+      background-color: palette(blue);
+      height: 5px;
+    }
+  }
+}

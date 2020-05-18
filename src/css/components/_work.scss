@@ -1,0 +1,28 @@
+.section--work {
+  position: relative;
+  margin-top: 95vh;
+  z-index: 3;
+
+  &:before {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    z-index: -1;
+    display: block;
+    width: 100vw;
+    height: calc(100% + 100px);
+    content: "";
+    background-color: palette(blue);
+    -webkit-transform: translate(-50%);
+    transform: translate(-50%);
+    box-shadow: $box-shadow-top;
+
+    @include breakpoint(sm) {
+      height: calc(100% + 160px);
+    }
+
+    @include breakpoint(lg) {
+      height: calc(100% + 280px)
+    }
+  }
+}

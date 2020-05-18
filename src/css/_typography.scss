@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css?family=Inconsolata:300,400,500|Karla&display=swap');
+
+$font-sans: 'Karla', sans-serif;
+$font-serif: 'Inconsolata' ,serif;
+
+%font-sans {
+  font-family: $font-sans;
+}
+
+%font-serif {
+  font-family: $font-serif;
+}
+
+h1, h3 {
+  font-family: $font-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+
+}
+
+h1 {
+  font-size: em(14px);
+
+  @include breakpoint(sm) {
+    font-size: em(18px);
+  }
+}
+
+h3 {
+  font-size: em(13px);
+
+  @include breakpoint(sm) {
+    font-size: em(14px);
+  }
+}
+
+h2 {
+  font-family: $font-sans;
+  font-weight: 100;
+  font-size: em(18px);
+  margin-top: 0;
+
+  @include breakpoint(sm) {
+    font-size: em(28px);
+  }
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+p {
+  margin: 12px 0;
+  font-family: $font-sans;
+  font-size: em(16px);
+  line-height: 1.5;
+}

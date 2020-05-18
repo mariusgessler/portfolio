@@ -1,0 +1,15 @@
+.tool-logos__wrapper {
+  display: flex;
+  .tool-logos__item {
+      width: 25px;
+      filter: brightness(6) grayscale(100%);
+  
+      &:not(:last-of-type) {
+        margin-right: 15px;
+      }
+  
+      &:hover {
+        filter: brightness(1);
+      }
+  }
+}
