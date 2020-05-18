@@ -66,8 +66,7 @@ const Wave = () => {
       <g id="Layer_3" data-name="Layer 3">
         <title>wave</title>
         <path
-          d={`${d}`}
-          transform="translateZ(0)" // Hardware accel
+          d={`${d || 'M-0,5 s0-5 5-1 5-3 5-1 V3 H-5 Z'}`}
         />
       </g>
     </svg>
