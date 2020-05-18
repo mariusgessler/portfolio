@@ -31,8 +31,10 @@ const Work = () => {
   return (
     <div className="section section--work">
       <div className="container">
-        <div className="row center-xs middle-sm between-md full">
-          {getProjects().map((project) => <WorkItem key={keyProvider()} item={project} />)}
+        <div className="container-fluid">
+          <div className="row center-xs middle-sm between-md full">
+            {getProjects().map((project) => <WorkItem key={keyProvider()} item={project} />)}
+          </div>
         </div>
       </div>
       <Wave />
