@@ -27,7 +27,7 @@ h1 {
 }
 
 h3 {
-  font-size: em(10px);
+  font-size: em(13px);
 
   @include breakpoint(sm) {
     font-size: em(14px);
@@ -56,9 +56,3 @@ p {
   font-size: em(16px);
   line-height: 1.5;
 }
-
-// .text__wrapper {
-//   @include breakpoint(sm) {
-//     max-width: 320px;
-//   }
-// }

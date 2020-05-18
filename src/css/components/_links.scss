@@ -4,15 +4,19 @@
   .link__container {
     border-radius: 100%;
     img {
-      width: 25px;
+      width: 20px;
+
+      @include breakpoint(sm) {
+        width: 25px;
+      }
     }
   }
 }
+
 .section--footer {
   .links__wrapper {
     .link__container {
       @include neumorphicGrey(5px, normal);
-
       width: 35px;
       height: 35px;
 
