@@ -6,7 +6,7 @@ const Hero = () => (
     <div className="container">
       <div className="container-fluid">
         <div className="row center-xs between-sm middle-sm">
-          <div className="col col-xs-12 col-sm-4">
+          <div className="col col-xs-12 col-sm-6 col-md-4">
             <div className="introduction text__wrapper">
               <h1>Hi, I&apos;m Marius.</h1>
               <h2>
