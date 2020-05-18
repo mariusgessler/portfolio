@@ -16,7 +16,7 @@
   {
     "title": "Telegram Bot: Bored in the House",
     "illustration": "paperplane",
-    "description": "I created this simple Telegram Bot to hopefully give user some ideas on what to do, while we were all stuck at home.",
+    "description": "I created this simple Telegram Bot to hopefully give users some ideas on what to do, while we were all stuck at home.",
     "tools": [
       "express", "javascript", "firebase"
     ],
