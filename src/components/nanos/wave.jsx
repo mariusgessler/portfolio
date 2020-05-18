@@ -67,6 +67,7 @@ const Wave = () => {
         <title>wave</title>
         <path
           d={`${d}`}
+          transform="translateZ(0)" // Hardware accel
         />
       </g>
     </svg>
