@@ -9,6 +9,10 @@ const Footer = () => {
   {
     type: 'github_blue',
     link: 'https://github.com/mariusgessler/',
+  },
+  {
+    type: 'email_blue',
+    link: 'mailto: marius.gessler@gmail.com',
   }];
 
   return (
