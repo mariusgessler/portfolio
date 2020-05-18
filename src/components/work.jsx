@@ -2,6 +2,7 @@ import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import WorkItem from './workitem';
 import Wave from './nanos/wave';
+import keyProvider from '../utilis/helpers';
 
 const Work = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const Work = () => {
     <div className="section section--work">
       <div className="container">
         <div className="row center-xs middle-sm between-md full">
-          {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
+          {getProjects().map((project) => <WorkItem key={keyProvider()} item={project} />)}
         </div>
       </div>
       <Wave />

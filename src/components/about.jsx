@@ -1,6 +1,7 @@
 import React from 'react';
 import { useStaticQuery, graphql } from 'gatsby';
 import Headshot from './nanos/headshot';
+import keyProvider from '../utilis/helpers';
 
 const About = () => {
   const data = useStaticQuery(graphql`
@@ -31,7 +32,7 @@ const About = () => {
               </div>
               <div className="description text__wrapper">
                 <h3>{getAbout().title}</h3>
-                {getAbout().content.split('\n').map((i) => <p key={i}>{i}</p>)}
+                {getAbout().content.split('\n').map((i) => <p key={keyProvider()}>{i}</p>)}
               </div>
             </div>
           </div>
