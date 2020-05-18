@@ -25,12 +25,10 @@ const About = () => {
       <div className="container">
         <div className="container-fluid">
           <div className="row center-xs around-md">
-            <div className="col col-xs-12 col-sm-4 top-xs">
+            <div className="col col-xs-12 col-sm-6 top-xs">
               <div className="img__wrapper fade-in">
                 <Headshot />
               </div>
-            </div>
-            <div className="col col-xs-12 col-sm-6">
               <div className="description text__wrapper">
                 <h3>{getAbout().title}</h3>
                 {getAbout().content.split('\n').map((i) => <p key={i}>{i}</p>)}
