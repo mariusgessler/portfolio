@@ -30,10 +30,8 @@ const Work = () => {
   return (
     <div className="section section--work">
       <div className="container">
-        <div className="container-fluid">
-          <div className="row center-xs middle-sm between-md">
-            {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
-          </div>
+        <div className="row center-xs middle-sm between-md full">
+          {getProjects().map((project) => <WorkItem key={project.title} item={project} />)}
         </div>
       </div>
       <Wave />

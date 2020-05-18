@@ -1,8 +1,7 @@
 .section--work__item {
   @include neumorphicBlue(30px, normal);
-  height: 530px;
   color: palette(white);
-  margin-top: 40px;
+  margin-top: 80px;
   padding: 25px 25px;
   cursor: pointer;
 
@@ -26,8 +25,13 @@
       height: 600px;
     }
 
+    @include breakpoint(lg) {
+      margin-top: 100px;
+    }
+
     a {
       @include screen-min(575px) {
+        height: 100%;
         display: grid;
         grid-template-columns: 1fr 1fr;
         grid-template-rows: 40px 1fr 30px;
