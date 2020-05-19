@@ -5,7 +5,7 @@ module.exports = {
     title: 'Marius Gessler',
     description: 'A developer looking to work on meaningful projects with some nice people.',
     author: 'Marius Gessler',
-    keywords: 'front end developer, web developer, web designer, web development, react developer, developer netherlands'
+    keywords: 'front end developer, web developer, web designer, web development, react developer, vue developer, developer netherlands',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
@@ -74,7 +74,7 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-offline',
       options: {
-        precachePages: ['/index/', '/about'],
+        precachePages: ['/index/'],
       },
     },
   ],
