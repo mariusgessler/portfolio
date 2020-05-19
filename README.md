@@ -11,7 +11,6 @@ Built with:
 * _Gatsby.js_ - 2.15.21
 * _GraphQL_ 
 * _< styled components >_ - 3.1.9
-* _Contenful_
 * Hosted with _Netlify_
 
 ## Contact me
