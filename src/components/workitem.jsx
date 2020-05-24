@@ -10,7 +10,7 @@ const WorkItem = (props) => {
     <div className="col col-xs-12 col-md-3">
       <div className="section--work__item">
         <a href={`${item.links[0].link}`} rel="noreferrer noopener" target="_blank">
-          <h3 className ="caption">{item.title}</h3>
+          <h3 className ="caption">{item.title}: <br /> {item.name} </h3>
           <div className="img__wrapper fade-in">
             <img src={require(`../assets/illustrations/${item.illustration}.svg`)} alt={`${item.illustration}`} />
           </div>

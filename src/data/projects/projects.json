@@ -1,6 +1,7 @@
 [
   {
-    "title": "Static Site (JAM): Portfolio",
+    "title": "Static Site (JAM)",
+    "name": "Portfolio",
     "illustration": "portfolio",
     "description": "This personal website was built by me to showcase some of my recent work - and experiment with new technologies.",
     "tools": [
@@ -14,7 +15,8 @@
     ]
   },
   {
-    "title": "Telegram Bot: Bored in the House",
+    "title": "Telegram Bot",
+    "name": "Bored in the House",
     "illustration": "paperplane",
     "description": "I created this simple Telegram Bot to hopefully give users some ideas on what to do, while we were all stuck at home.",
     "tools": [
@@ -28,7 +30,8 @@
     ]
   },
   {
-    "title": "Landing Page: Hiber Global",
+    "title": "Landing Page",
+    "name": "Hiber Global",
     "illustration": "satellite",
     "description": "Some of the front-facing work I did at Hiber includes this landing page which I built in collaboration with our talented in-house designers",
     "tools": [

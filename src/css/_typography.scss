@@ -1,5 +1,5 @@
 $font-sans: 'Karla', sans-serif;
-$font-mono: 'Roboto Mono', monospace;
+$font-mono: 'DM Mono', monospace;
 
 %font-sans {
   font-family: $font-sans;
@@ -12,24 +12,22 @@ $font-mono: 'Roboto Mono', monospace;
 h1, h3 {
   font-family: $font-mono;
   text-transform: uppercase;
-  font-weight: 400;
-
+  letter-spacing: 2px;
+  line-height: 15px;
 }
 
 h1 {
+  font-weight: 400;
   font-size: em(14px);
 
   @include breakpoint(sm) {
-    font-size: em(18px);
+    font-size: em(16px);
   }
 }
 
 h3 {
-  font-size: em(13px);
-
-  @include breakpoint(sm) {
-    font-size: em(14px);
-  }
+  font-size: em(12px);
+  font-weight: 300;
 }
 
 h2 {
@@ -37,6 +35,8 @@ h2 {
   font-weight: 100;
   font-size: em(18px);
   margin-top: 0;
+  line-height: 35px;
+
 
   @include breakpoint(sm) {
     font-size: em(28px);

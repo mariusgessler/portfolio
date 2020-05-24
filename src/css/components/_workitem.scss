@@ -5,107 +5,118 @@
   padding: 25px 25px;
   cursor: pointer;
 
-    &:hover {
-      @include neumorphicBlue(30px, hover)
-    }
+  &:hover {
+    @include neumorphicBlue(30px, hover)
+  }
 
-    &:active {
-      @include neumorphicBlue(30px, clicked)
-    }
+  &:active {
+    @include neumorphicBlue(30px, clicked)
+  }
 
-    @include screen-min(420px) {
-      height: 500px;
-    }
+  @include screen-min(420px) {
+    height: 500px;
+  }
 
+  @include screen-min(575px) {
+    height: 260px;
+  }
+
+  @include breakpoint(md) {
+    height: 600px;
+  }
+
+  @include breakpoint(lg) {
+    margin-top: 100px;
+  }
+
+  a {
     @include screen-min(575px) {
-      height: 260px;
+      height: 100%;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-template-rows: 40px 1fr 30px;
+      grid-column-gap: 25px;
+      grid-template-areas: 
+        ". caption"
+        "image description"
+        ". links";
+
+      h3 {
+        br {
+          display: none;
+        }
+      }
     }
 
     @include breakpoint(md) {
-      height: 600px;
-    }
+      display: block;
 
-    @include breakpoint(lg) {
-      margin-top: 100px;
+      h3 {
+        br {
+          display: block;
+        }
+      }
     }
+  }
 
-    a {
+  .img__wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin: 0 auto;
+      border-radius: 6px;
+      width: 100%;
+      height: 250px;
+      grid-area: image;
+
       @include screen-min(575px) {
         height: 100%;
-        display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 40px 1fr 30px;
-        grid-column-gap: 25px;
-        grid-template-areas: 
-          ". caption"
-          "image description"
-          ". links";
       }
 
       @include breakpoint(md) {
-        display: block;
-      }
-
-    }
-
-    .img__wrapper {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin: 0 auto;
-        border-radius: 6px;
-        width: 100%;
         height: 250px;
-        grid-area: image;
-
-        @include screen-min(575px) {
-          height: 100%;
-        }
-
-        @include breakpoint(md) {
-          height: 250px;
-        }
-
-        img {
-            max-width: 200px;
-
-            @include breakpoint(sm) {
-              max-width: 150px;
-            }
-
-            @include screen-min(575px) {
-              max-width: 180px;
-            }
-        }
-    }
-
-    .description {
-      grid-area: description;
-      height: 165px;
-
-      @include screen-min(420px) {
-        height: 130px;
       }
 
-      @include screen-min(575px) {
-        height: 100%;
-      }
+      img {
+          max-width: 200px;
 
-      @include breakpoint(md) {
-        height: 200px;
+          @include breakpoint(sm) {
+            max-width: 150px;
+          }
+
+          @include screen-min(575px) {
+            max-width: 180px;
+          }
       }
+  }
+
+  .description {
+    grid-area: description;
+    height: 165px;
+
+    @include screen-min(420px) {
+      height: 130px;
     }
 
-    .caption {
-      grid-area: caption;
+    @include screen-min(575px) {
+      height: 100%;
     }
 
-    .links__wrapper {
-      grid-area: links;
-      justify-content: flex-end;
-
-      @include breakpoint(md) {
-        justify-content: flex-start;
-      }
+    @include breakpoint(md) {
+      height: 200px;
     }
+  }
+
+  .caption {
+    grid-area: caption;
+  }
+
+  .links__wrapper {
+    grid-area: links;
+    justify-content: flex-end;
+
+    @include breakpoint(md) {
+      justify-content: flex-start;
+    }
+  }
 }

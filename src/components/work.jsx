@@ -11,6 +11,7 @@ const Work = () => {
         edges {
           node {
             title
+            name
             description
             illustration
             tools

@@ -65,8 +65,8 @@ module.exports = {
             family: `Karla`,
           },
           {
-            family: `Roboto Mono`,
-            variants: [`300`]
+            family: `DM Mono`,
+            variants: [`300`, `400`]
           },
         ],
       },
