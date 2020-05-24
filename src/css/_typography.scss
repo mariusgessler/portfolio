@@ -1,18 +1,16 @@
-@import url('https://fonts.googleapis.com/css?family=Inconsolata:300,400,500|Karla&display=swap');
-
 $font-sans: 'Karla', sans-serif;
-$font-serif: 'Inconsolata' ,serif;
+$font-mono: 'Roboto Mono', monospace;
 
 %font-sans {
   font-family: $font-sans;
 }
 
-%font-serif {
-  font-family: $font-serif;
+%font-mono {
+  font-family: $font-mono;
 }
 
 h1, h3 {
-  font-family: $font-serif;
+  font-family: $font-mono;
   text-transform: uppercase;
   font-weight: 400;
 
