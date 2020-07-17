@@ -13,12 +13,12 @@ const Hero = () => (
                 I&apos;m a developer who enjoys working on meaningful projects 
                 with some nice people, currently at
                 <a
-                  href="https://hiber.global/"
+                  href="https://www.braincreators.com/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
                   {' '}
-                  Hiber.
+                  Braincreators.
                 </a>
               </h2>
             </div>
