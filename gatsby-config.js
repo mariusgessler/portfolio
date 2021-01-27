@@ -35,14 +35,6 @@ module.exports = {
       },
     },
     {
-      resolve: 'gatsby-plugin-google-analytics',
-      options: {
-        trackingId: process.env.GATSBY_ANALYTICS_TRACKING_ID,
-        head: false,
-        anonymize: true,
-      },
-    },
-    {
       resolve: 'gatsby-source-contentful',
       options: {
         spaceId: process.env.GATSBY_SPACE_ID,
