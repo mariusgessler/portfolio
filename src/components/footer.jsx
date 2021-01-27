@@ -24,7 +24,7 @@ const Footer = () => {
               <Links a links={socials} />
             </div>
             <div className="col col-xs-12 col-sm-6 end-sm">
-              <h3>Marius Gessler, 2020</h3>
+              <h3>Marius Gessler, 2021</h3>
             </div>
           </div>
         </div>
