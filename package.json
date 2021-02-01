@@ -2,7 +2,7 @@
   "name": "portfolio-of-marius",
   "private": true,
   "description": "My personal website",
-  "version": "2.0",
+  "version": "2.0.0",
   "author": "Marius Gessler <marius.gessler@gmail.com>",
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.2",
