@@ -11,15 +11,7 @@ const Hero = () => (
               <h1>Hi, I&apos;m Marius.</h1>
               <h2>
                 I&apos;m a developer who enjoys working on meaningful projects 
-                with some nice people, currently at
-                <a
-                  href="https://www.braincreators.com/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  {' '}
-                  Braincreators.
-                </a>
+                with some nice people.
               </h2>
             </div>
           </div>
