@@ -3,7 +3,7 @@ require('dotenv').config();
 module.exports = {
   siteMetadata: {
     title: 'Marius Gessler',
-    description: 'A developer looking to work on meaningful projects with some nice people.',
+    description: 'Frontend Developer based in The Netherlands.',
     author: 'Marius Gessler',
     keywords: 'front end developer, web developer, web designer, web development, react developer, vue developer, developer netherlands',
   },
