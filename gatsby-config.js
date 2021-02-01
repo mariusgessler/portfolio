@@ -50,18 +50,13 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-prefetch-google-fonts`,
+      resolve: `gatsby-plugin-google-fonts`,
       options: {
         fonts: [
-          {
-            family: `Karla`,
-          },
-          {
-            family: `DM Mono`,
-            variants: [`300`, `400`]
-          },
+          `Karla`,
+          `DM Mono\:300,400,`
         ],
-      },
+      }
     },
     'gatsby-transformer-sharp',
     'gatsby-plugin-sharp',
